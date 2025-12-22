@@ -64,6 +64,25 @@ The training and validation pipeline is contained in `vision_module_baseline/yol
     * **Validation:** Generating metrics and confusion matrices.
 
 ### 2. Navigation Module (Simulation)
+
+## Authors
+
+* **[Eleonora Liani]**
+    * *Role:* Vision Baseline Strategy.
+    * *Contribution:* Developed the YOLOv8s pipeline, implemented Image Tiling, optimized Recall via Test Time Augmentation (TTA).
+
+* **[Marianna Esposito]**
+    * *Role:* Vision Enriched Strategy.
+    * *Contribution:* Managed SARD dataset integration, conducted benchmarking on YOLOv8n, YOLO11n, and YOLO11m.
+
+* **[Andrea De Marco]**
+    * *Role:* Autonomous Navigation.
+    * *Contribution:* Developed the Collaborative Greedy Search algorithm and swarm coverage logic.
+
+---
+
+## References
+
 ---
 
 ## Repository Structure
