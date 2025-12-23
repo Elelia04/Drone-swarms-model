@@ -87,20 +87,27 @@ The training and validation pipeline is contained in `vision_module_baseline/yol
 
 ## Repository Structure
 
-The codebase is organized by module. 
+The codebase is organized into three main logical units: Baseline Vision, Enriched Vision, and Navigation.
 
 ```text
 SAR-Drone-Swarm-System/
 │
-├── vision_module_baseline/     
-│   ├── yolov8s-training.ipynb  # Training pipeline (HERIDAL + TTA)
-│   ├── best.pt                 # Best model weights
-│   └── validation_plots/       # Confusion matrix & PR curves
+├── yolov8s/                        <-- [Vision Baseline: High Recall Strategy]
+│   ├── yolov8s-training.ipynb      # Complete Pipeline: Tiling, Training, TTA Validation
+│   ├── best.pt                     # Optimized Model Weights (YOLOv8s)
+│   └── yolov8s_graphs/             # Confusion Matrices, PR Curves & Visual Results
 │
-├── vision_module_enriched/     
-│   ├── yolov11_experiments/    # SARD Dataset enrichment & YOLO11 comparisons
-│   └── ...
+├── Enriched/                       <-- [Vision Enriched: SARD + Architecture Benchmarking]
+│   ├── Yolov8n/                    # Lightweight model chosen for Edge Deployment
+│   ├── Yolov11n/                   # Generational comparison (v8 vs v11)
+│   └── Yolov11m/                   # High-Precision model (SARD enhanced)
+│       ├── notebook-yolov11m.ipynb # Training experiment
+│       ├── results.csv             # Raw metrics data
+│       └── weights_download_link.txt # External link for large model weights
 │
-└── navigation_module/          
-    ├── swarm_logic/            # Greedy search & collision avoidance logic
-    └── ...
+├── Drones_movement.ipynb           <-- [Navigation Module]
+│                                   # Implementation of Collaborative Greedy Search 
+│                                   # & Swarm Coverage Logic
+│
+├── LICENSE                         # MIT License
+└── README.md                       # Project Documentation
